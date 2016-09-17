@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project ZHarvester">
+    <!--ANT 1.7 is required-->
+    <property name="libs" location="libs" />
+    <property name="dest" location="out" />
+    <!-- Destination directory -->
+    <target name="create_run_jar" depends="compile">
+        <jar destfile="${dest}/ZHarvester.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="ru.umeta.zharvester.ZHarvester"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="${libs}/juniversalchardet-1.0.3.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${libs}/yaz4j-any-1.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${libs}/base-harvester.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${libs}/freelib-marc4j-2.6.6.jar"/>
+        </jar>
+        <copy todir="${dest}/libs">
+            <fileset dir="${libs}">
+                <exclude name="*.jar"/>
+            </fileset>
+        </copy>
+        <mkdir dir="${dest}/results"/>
+    </target>
+    <target name="compile">
+        <mkdir dir="bin" />
+        <javac destdir="bin" srcdir="src" target="1.8" source="1.8" >
+            <classpath refid="classpath.base" />
+        </javac>
+    </target>
+    <path id="classpath.base">
+        <fileset dir="${libs}">
+            <include name="*.jar" />
+        </fileset>
+    </path> 
+</project>

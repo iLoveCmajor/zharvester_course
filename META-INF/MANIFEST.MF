@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Main-Class: ru.umeta.zharvester.ZHarvester
+Class-Path: ZHarvester_lib/base-harvester.jar ZHarvester_lib/freelib-marc4j-2.6.6.jar ZHarvester_lib/juniversalchardet-1.0.3.jar
+ ZHarvester_lib/yaz4j-any-1.4.jar ZHarvester_lib/msvcr120.dll ZHarvester_lib/libxml2.dll ZHarvester_lib/libxslt.dll ZHarvester_lib/yaz4j.dll ZHarvester_lib/yaz5.dll
+ ZHarvester_lib/MARC21slim2MODS3.xsl ZHarvester_lib/123.xsl 
+

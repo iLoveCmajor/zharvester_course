@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Users/cuda/Desktop/Java/workspace/libs"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="ZHarvester_lib/juniversalchardet-1.0.3.jar"/>
+	<classpathentry kind="lib" path="ZHarvester_lib/yaz4j-any-1.4.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="ZHarvester_lib/base-harvester.jar"/>
+	<classpathentry kind="lib" path="ZHarvester_lib/freelib-marc4j-2.6.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
